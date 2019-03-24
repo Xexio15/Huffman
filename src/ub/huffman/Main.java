@@ -9,13 +9,15 @@ public class Main {
         ArrayList a = Utils.parseAlphabet(new File(args[0]));
         HuffmanTree t = new HuffmanTree(a);
 
-        System.out.println("Symbol Code");
+        System.out.println("Symbol Code Probability");
         for(int i = 0; i < t.getTable().length; i++){
-            System.out.println(t.getTable()[i][0]+" "+t.getTable()[i][1]);
+            System.out.println(t.getTable()[i][0]+" "+t.getTable()[i][1]+" "+t.getTable()[i][2]);
         }
 
-        String text = "KDQKKD9D10JDDQKDJQ1010JKDJQDJDJJQQDQKQKJK10QKQKDQQDDKDK910JKDDQQ10KKDQQDJDKJQ10DKK10DJDDKDKDQ10JDQD109DJ99JQDD"; //Demo.txt
+        //String text = "KDQKKD9D10JDDQKDJQ1010JKDJQDJDJJQQDQKQKJK10QKQKDQQDDKDK910JKDDQQ10KKDQQDJDKJQ10DKK10DJDDKDKDQ10JDQD109DJ99JQDD"; //Demo.txt
         //String text = "DD9Q9DDD910KD10KQDDQQD10DDD10DJKDDKDDDKDDDDJDKDDKQDDDKDKKDDJ9DDDDDQKDDDQKDQDDDDDDQJKKKDKDKD10JQDDDDK9DDKK"; //Demo2.txt
+
+        String text = Utils.randomMessage(t.table,300);
         System.out.println("Text: "+text);
         String coded = t.encode(text);
         System.out.println("Coded Text: "+coded);

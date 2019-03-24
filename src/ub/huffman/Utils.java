@@ -41,5 +41,27 @@ public class Utils {
     }
 
 
+    public static String randomMessage(String [][] symbols, int len){
+        if (len % symbols.length != 0){
+            System.err.println("Len must be multiple of 100 to match probabilities");
+            return null;
+        }
+        ArrayList<String> totalSymbols = new ArrayList<>();
+        for(int i = 0; i < symbols.length; i++){
+            for(int j = 0; j < (int)((Float.parseFloat(symbols[i][2]))*len); j++){
+                totalSymbols.add(symbols[i][0]);
+            }
+        }
+
+        String text = "";
+        while(!totalSymbols.isEmpty()){
+            int s = (int)Math.round(Math.random()*(totalSymbols.size()-1));
+            text = text + totalSymbols.get(s);
+            totalSymbols.remove(s);
+        }
+
+        return text;
+    }
+
 
 }

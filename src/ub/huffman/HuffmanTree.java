@@ -16,7 +16,7 @@ public class HuffmanTree {
             alphabet.add(n.key);
         }
 
-        table = new String[alphabet.size()][2];
+        table = new String[alphabet.size()][3];
 
         //Generem l'arbre
         boolean last = false;
@@ -33,6 +33,7 @@ public class HuffmanTree {
             String code = generateCode(alphabet.get(i));
             table[i][0] = alphabet.get(i);
             table[i][1] = code;
+            table[i][2] = searchNode(root,alphabet.get(i)).value+"";
         }
     }
 
