@@ -8,9 +8,10 @@ import java.util.*;
 public class Utils {
 
     /**
-     * File format: <symbol>,<probability>
+     * File format: <symbol>,<probability(0-100) decimals with .>
      *     Example: D,30
      *              A,20
+     *              B,5.5
      *              .
      *              .
      *              .
@@ -22,10 +23,12 @@ public class Utils {
         try {
             List<String> lines = Files.readAllLines(a.toPath());
             for(String line : lines){
-                line = line.replaceAll(" ","");
-                String [] key_value = line.split(",");
+                if(!line.equals("") || !line.equals(" ") || !line.equals("\n") || !line.equals(" \n")) {
+                    line = line.replaceAll(" ", "");
+                    String[] key_value = line.split(",");
 
-                alphabet.add(new Node(key_value[0],Float.parseFloat(key_value[1])/100, null));
+                    alphabet.add(new Node(key_value[0], Float.parseFloat(key_value[1]) / 100, null));
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -42,7 +45,7 @@ public class Utils {
 
 
     public static String randomMessage(String [][] symbols, int len){
-        if (len % symbols.length != 0){
+        if (len % 100 != 0){
             System.err.println("Len must be multiple of 100 to match probabilities");
             return null;
         }
@@ -52,7 +55,6 @@ public class Utils {
                 totalSymbols.add(symbols[i][0]);
             }
         }
-
         String text = "";
         while(!totalSymbols.isEmpty()){
             int s = (int)Math.round(Math.random()*(totalSymbols.size()-1));
