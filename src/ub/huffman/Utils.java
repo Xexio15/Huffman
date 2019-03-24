@@ -45,8 +45,8 @@ public class Utils {
 
 
     public static String randomMessage(String [][] symbols, int len){
-        if (len % 100 != 0){
-            System.err.println("Len must be multiple of 100 to match probabilities");
+        if (len % 100 != 0 && len % 10 != 0){
+            System.err.println("Len must be multiple of 100 or 10 to match probabilities");
             return null;
         }
         ArrayList<String> totalSymbols = new ArrayList<>();
