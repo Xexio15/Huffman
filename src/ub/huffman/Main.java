@@ -39,6 +39,7 @@ public class Main {
 
         System.out.println("Average used bits: " + t.averageBits()+ " bits");
         System.out.println("Enthropy (Theoric minimum): " + t.enthropy()+ " bits");
+        System.out.println("Needed bits without compression: "+ t.getNumBits());
         System.out.println("Compression Ratio: " + t.compressionRatio());
     }
 }

@@ -331,7 +331,15 @@ public class HuffmanTree {
         return -sum;
     }
 
+    public int getNumBits(){
+        int bits = 1;
+        while (Math.pow(2,bits) < alphabet.size()){
+            bits ++;
+        }
+        return bits;
+    }
+
     public double compressionRatio(){
-        return Math.ceil(averageBits())/averageBits();
+        return getNumBits()/averageBits();
     }
 }

@@ -51,7 +51,7 @@ public class Utils {
         }
         ArrayList<String> totalSymbols = new ArrayList<>();
         for(int i = 0; i < symbols.length; i++){
-            for(int j = 0; j < (int)((Float.parseFloat(symbols[i][2]))*len); j++){
+            for(int j = 0; j < (int)Math.round((Float.parseFloat(symbols[i][2]))*len); j++){
                 totalSymbols.add(symbols[i][0]);
             }
         }
