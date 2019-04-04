@@ -32,7 +32,7 @@ public class Main {
             int option = sc.nextInt();
             String text = "";
             if(option == 1) {
-                System.out.println("Enter message size:");
+                System.out.println("Enter message size:  (Multiple of 10 or 100)");
                 int len = sc.nextInt();
                 text = Utils.randomMessage(t.table, len);
             }
