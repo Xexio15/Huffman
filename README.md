@@ -30,7 +30,12 @@ de l'apartat a ens resulta el següent:
 Podem comprovar que aixo coincideix amb l'exercici resolt a clase.
 
 ### ¿Quin factor de compresió aconseguiu? 
-    Independentment de la longitud de les seqüéncies entrades al executar Huffman ens trovem que el ratio de compressió sempre es el mateix, siguin 10.000 o 100 caràcters. Aquest factor de compressió començarà a mostrar variacions quan assignem probabilitats diferents als símbols d'entrada previs a la creació de l'arbre de Huffman.
+    Independentment de la longitud de les seqüéncies entrades al executar Huffman ens trovem que el 
+    ratio de compressió sempre es el mateix, siguin 10.000 o 100 caràcters. Aquest factor de compressió
+    començarà a mostrar variacions quan assignem probabilitats diferents als símbols d'entrada previs
+    a la creació de l'arbre de Huffman.
     
 ### ¿Quina relació té aquest amb l'entropía calculada teóricament per al conjunt de símbols de l'apartat a)?
-    Tot i que l'entropía ens diu que les dades es poden codificar utilitzant com a mínim 2,40 bits per símbol, el resultat final utilitzant Huffman es que son necessaris 2,45 bits per símbol, ja que l'entropía indica el mínim teóric, es a dir una compressió perfecta.
+    Tot i que l'entropía ens diu que les dades es poden codificar utilitzant com a mínim 2,40 bits per
+    símbol, el resultat final utilitzant Huffman es que son necessaris 2,45 bits per símbol, ja que 
+    l'entropía indica el mínim teóric, es a dir una compressió perfecta.
