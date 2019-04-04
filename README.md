@@ -29,15 +29,8 @@ de l'apartat a ens resulta el següent:
 
 Podem comprovar que aixo coincideix amb l'exercici resolt a clase.
 
-### ¿Qué factor de compresión alcanzáis? 
-    Independientemente de la longitud de las sequencias entradas al ejecutar Huffman nos encontramos que el ratio 
-    compresion siempre es el mismo independientemente de la longitud de la cadena, ya sean 10.000 o 100 caracteres. 
-    Este factor de compresion empezara a mostrar variaciones cuando asignemos probabilidades diferentes a los 
-    diferentes simbolos de entrada previos a crear el arbol de Huffman. 
-
-### ¿Qué relación tiene éste con la entropía calculada teóricamente para el conjunto de símbolos del apartado a)?
-
-    Fíjate que aunque la entropía nos dice que los datos se pueden codificar usando 2,40
-    bits por símbolo, el resultado final usando Huffman es que han sido necesarios 2,45 bits
-    por símbolo, ya que la entropía indica una cota inferior de los bits por símbolo
-    necesarios.
+### ¿Quin factor de compresió aconseguiu? 
+    Independentment de la longitud de les seqüéncies entrades al executar Huffman ens trovem que el ratio de compressió sempre es el mateix, siguin 10.000 o 100 caràcters. Aquest factor de compressió començarà a mostrar variacions quan assignem probabilitats diferents als símbols d'entrada previs a la creació de l'arbre de Huffman.
+    
+### ¿Quina relació té aquest amb l'entropía calculada teóricament per al conjunt de símbols de l'apartat a)?
+    Tot i que l'entropía ens diu que les dades es poden codificar utilitzant com a mínim 2,40 bits per símbol, el resultat final utilitzant Huffman es que son necessaris 2,45 bits per símbol, ja que l'entropía indica el mínim teóric, es a dir una compressió perfecta.
